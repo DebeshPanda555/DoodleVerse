@@ -6,6 +6,7 @@ body {
 
     background: #f8f8f8;
     font-family: system-ui, sans-serif;
+
     --block-accent-color: #8899cc;
 }
 
@@ -14,17 +15,62 @@ button {
     font-size: 1rem;
 }
 
+
+#toolbar {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+
+    background: white;
+    padding: 10px 12px;
+
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    z-index: 1000;
+}
+
+.tool-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tool-group label {
+    font-size: 0.9rem;
+}
+
+#brushSize {
+    width: 120px;
+}
+
+#undoBtn,
+#redoBtn {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* ---------- Navigation ---------- */
+
 .nav {
     position: fixed;
     bottom: 0;
     left: 0;
 }
 
+/* ---------- Users List ---------- */
+
 .users {
     margin-bottom: -8px;
     max-height: 90vh;
     overflow-y: auto;
 }
+
+/* ---------- Avatar ---------- */
 
 .avatar {
     display: flex;
@@ -41,14 +87,18 @@ button {
     margin-right: .4em;
 }
 
+/* ---------- User Edit Dialog ---------- */
+
 .userEditDialog-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
     height: 100vh;
     width: 100vw;
+
     background: rgba(0, 0, 0, .2);
 }
 
@@ -62,6 +112,8 @@ button {
 .userEditDialog label {
     padding-left: 6px;
 }
+
+/* ---------- Input Styles ---------- */
 
 .inputGroup {
     padding: 8px;
@@ -85,14 +137,19 @@ button {
     flex-direction: row;
 }
 
+/* ---------- Toast Notifications ---------- */
+
 .toasts {
     position: fixed;
     top: 0;
     left: 0;
+
     padding-left: 0;
     margin: 0;
+
     max-height: 90vh;
     overflow-y: auto;
+
     padding-bottom: 8px;
 
     display: flex;
