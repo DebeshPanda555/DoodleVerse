@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/thesephist/draw/pkg/draw"
+	"github.com/DebeshPanda555/DoodleVerse/pkg/draw"
 )
 
 func main() {
